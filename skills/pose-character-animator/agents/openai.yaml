@@ -1,0 +1,4 @@
+interface:
+  display_name: "Pose Character Animator"
+  short_description: "Create a character then animate via pose sequence prompts."
+  default_prompt: "Build a character design and generate consistent pose prompts for animation."
