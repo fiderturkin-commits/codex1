@@ -1,0 +1,105 @@
+:root {
+  color-scheme: dark;
+  --bg: #111419;
+  --panel: #1b2130;
+  --text: #e8ecf4;
+  --muted: #aeb8cc;
+  --line: #334058;
+  --accent: #5aa7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  min-height: 100vh;
+  gap: 16px;
+  padding: 16px;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+textarea,
+input[type='file'] {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+  background: #111829;
+  color: var(--text);
+}
+
+.btns {
+  display: flex;
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+
+button {
+  border: 1px solid var(--line);
+  background: #182034;
+  color: var(--text);
+  border-radius: 10px;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--accent);
+  color: #031327;
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+.canvas-panel {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+}
+
+#stage {
+  width: 100%;
+  max-width: 900px;
+  border: 1px dashed var(--line);
+  border-radius: 10px;
+  background: #0f1523;
+}
+
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

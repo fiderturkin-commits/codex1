@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pose Character UI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="layout">
+      <section class="panel controls">
+        <h1>Pose Character UI</h1>
+        <p class="muted">
+          Загрузите референс, измените позу через скелет, затем экспортируйте пакет для генерации.
+        </p>
+
+        <label class="field">
+          <span>Референс-изображение</span>
+          <input id="imageInput" type="file" accept="image/*" />
+        </label>
+
+        <label class="field">
+          <span>Описание персонажа</span>
+          <textarea id="characterPrompt" rows="4" placeholder="Например: девушка-маг, синий плащ, серебряные волосы, стиль аниме"></textarea>
+        </label>
+
+        <label class="field">
+          <span>Дополнительные требования</span>
+          <textarea id="extraPrompt" rows="3" placeholder="Например: чистый фон, full body, мягкий свет"></textarea>
+        </label>
+
+        <div class="btns">
+          <button id="resetPoseBtn" type="button">Сбросить позу</button>
+          <button id="exportBtn" type="button" class="primary">Экспорт пакета</button>
+        </div>
+
+        <label class="field">
+          <span>Готовый запрос для модели</span>
+          <textarea id="finalPrompt" rows="8" readonly></textarea>
+        </label>
+      </section>
+
+      <section class="panel canvas-panel">
+        <canvas id="stage" width="900" height="620"></canvas>
+        <p class="muted small">
+          Перетаскивайте точки скелета мышкой. Красные линии задают целевую позу.
+        </p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
